@@ -18,22 +18,7 @@
 export default {
   data () {
     return {
-      fields: [
-        {
-          key: 'name',
-          label: 'Personaje'
-        },
-        {
-          key: 'created',
-          label: 'Fecha de Creación'
-        },
-        {
-          key: 'age',
-          label: 'Peliculas'
-        }
-      ],
-      items: [],
-      peliculas: []
+      items: []
     }
   },
   methods: {
