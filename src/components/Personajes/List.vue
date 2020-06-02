@@ -54,8 +54,7 @@ export default {
     descendente (data) {
       let newData = data.filter((item) => {
         return item.split('/')[5]
-      })
-      newData.sort((firstData, secondData) => secondData - firstData)
+      }).sort((firstData, secondData) => secondData - firstData)
       return newData
     }
   },
