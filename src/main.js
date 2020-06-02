@@ -6,6 +6,8 @@ import VueAxios from 'vue-axios'
 import VueMoment from 'vue-moment'
 import moment from 'moment-timezone'
 import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App'
 import router from './router'
 

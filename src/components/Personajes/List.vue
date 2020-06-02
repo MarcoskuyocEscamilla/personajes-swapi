@@ -1,16 +1,21 @@
 <template>
   <div class="container">
-    <ul>
-      <li v-for="item in items" v-bind:key="item.id">
-        {{item.id}} - {{ item.name }} - {{ $moment(item.created).format('LLL a') }}
-        <h1>Películas</h1>
-        <ol>
-          <li v-for="film in descendente(item.films)" v-bind:key="film.id">
-            {{ film }}
-          </li>
-        </ol>
-      </li>
-    </ul>
+    <b-container class="bv-example-row" fluid>
+      <b-row>
+        <b-col v-for="item in items" v-bind:key="item.id" sm="3" md="4" lg="4" class="p-1">
+          <b-card :title=item.name :sub-title="$moment(item.created).format('LLL a')">
+            <h3>Peliculas</h3>
+            <b-card-text>
+              <ol>
+                <li v-for="film in descendente(item.films)" v-bind:key="film.id">
+                  {{ film }}
+                </li>
+              </ol>
+            </b-card-text>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -18,7 +23,8 @@
 export default {
   data () {
     return {
-      items: []
+      items: [],
+      films: []
     }
   },
   methods: {
